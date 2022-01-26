@@ -4,6 +4,8 @@ A course recommendation system using the Coursera Courses dataset which contains
 
 The model has been trained using a dataset of 3,000 courses! Find the dataset [here](https://www.kaggle.com/khusheekapoor/coursera-courses-dataset-2021)
 
+Link to my Kaggle Notebook [here](https://www.kaggle.com/sagarbapodara/coursera-course-recommendation-system-webapp)
+
 ## Tech Used 
 
 **Language:** Python (3.9)
