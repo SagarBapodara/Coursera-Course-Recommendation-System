@@ -2,9 +2,9 @@
 
 A course recommendation system using the Coursera Courses dataset which contains over 3,000 courses. 
 
-The model has been trained using a dataset of 3,000 courses! Find the dataset [here](https://www.kaggle.com/khusheekapoor/coursera-courses-dataset-2021)
+The model has been trained using a dataset of 3,000 courses! Find the dataset [here 🔗](https://www.kaggle.com/khusheekapoor/coursera-courses-dataset-2021)
 
-Link to my Kaggle Notebook [here](https://www.kaggle.com/sagarbapodara/coursera-course-recommendation-system-webapp)
+Link to my Kaggle Notebook [here 🔗](https://www.kaggle.com/sagarbapodara/coursera-course-recommendation-system-webapp)
 
 ## Tech Used 
 
@@ -139,7 +139,7 @@ pip install streamlit
 
 ## Working Demo 
 
-The demo working of this web app can be found [here](https://youtu.be/9hQPhsIZsoA) | Do like it, if you watch it :) 
+The demo working of this web app can be found [here 🔗](https://youtu.be/9hQPhsIZsoA) | Do like it, if you watch it :) 
 
 ## 🚀 Thanks
 
