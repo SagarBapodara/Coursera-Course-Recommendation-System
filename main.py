@@ -12,8 +12,8 @@ import requests
 
 # <==== Code starts here ====>
 
-courses_list = pickle.load(open('courses.pkl','rb'))
-similarity = pickle.load(open('similarity.pkl','rb'))
+courses_list = pickle.load(open('./models/courses.pkl','rb'))
+similarity = pickle.load(open('./models/similarity.pkl','rb'))
 
 def recommend(course):
     index = courses_list[courses_list['course_name'] == course].index[0]
