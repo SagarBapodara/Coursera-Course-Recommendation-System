@@ -20,19 +20,17 @@ def get_recommendations(user_description, n=5):
     filtered_df = combined_df[combined_df['Course Name'].isin(recommended_courses)]
     return filtered_df
 
-user_description = "JavaScript"
-recommended_courses = get_recommendations(user_description, 5)
-print("Recommended Courses : ")
-recommended_courses
-
 @app.route("/", methods=["GET","POST"])
 def index():
     if request.method == "POST":
-        des= request.form.get("des")
-        recommendations = get_recommendations(des)
-        params={"title":"Home", "result":recommendations}
+        des = request.form.get("des")
+        num = request.form.get("num")
+        if not num:
+            num = 5
+        recommendations = get_recommendations(des,int(num))
+        params={"title":"Home", "result":{'active':True,"data" : recommendations}}
         return render_template("index.html", params=params)
-    params={"title":"Home"}
+    params={"title":"Home","result":{'active':False}}
     return render_template("index.html", params=params)
 if __name__ == "__main__":
     app.run(debug=True)
