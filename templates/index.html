@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block css_links %}
+{% endblock %}
+{% block body %}
+<div class="container">
+    <form method="POST" class="input-group my-5">
+        <input name="des" type="text" class="form-control" placeholder="Enter your Description" aria-label="Enter your Description" aria-describedby="button-addon2">
+        <button class="btn btn-outline-primary" type="submit" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+</div>
+<div class="container">
+    {% if params.result %}
+    <table class="table table-hover">
+        <thead class="table-light">
+          <tr>
+            <th scope="col">Sr.No</th>
+            <th scope="col">Course Name</th>
+            <th scope="col">Course Link</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            {% for index, row in params.result.iterrows() %}
+          <tr>
+            <th scope="row">{{index}}</th>
+            <td>{{row['Course Name']}}</td>
+            <td>{{row['Course URL']}}</td>
+          </tr>
+        </tbody>
+      </table>
+    {% endif %}  
+</div>
+{% endblock %}
+{% block js_links %}
+{% endblock %}
