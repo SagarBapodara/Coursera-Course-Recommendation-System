@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+{% block css_links %}
+{% endblock %}
+{% block body %}
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="/">Contributed Project</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/SagarBapodara">Sagar Bapodara's Project</a>
+    </li>
+  </ul>
+</div>
+<div class="container mt-2">
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Project Information
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          This is an Open Source Contributed Project From Final Year Engineering Students
+          <ul>
+            <li> <a href="https://github.com/nimitmore27"><i class="fa-brands fa-github"></i> Nimit More</a></li>
+            <li> <a href="https://github.com/Jaiswalshradha"><i class="fa-brands fa-github"></i> Shradha Jaiswal</a></li>
+            <li> <a href="https://github.com/shrushti0502"><i class="fa-brands fa-github"></i> Shrushti Thakur</a></li>
+            <li> <a href="https://github.com/Hetsss"><i class="fa-brands fa-github"></i> Hetal Paramar</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <form method="POST" class="input-group my-5">
+    <input name="des" type="text" class="form-control" placeholder="Enter your Description" aria-label="Enter your Description" aria-describedby="button-addon2">
+    <input name="num" type="number" class="form-control" placeholder="Number of recommendation" aria-label="Number of recommendation" aria-describedby="button-addon2">
+    <button class="btn btn-outline-primary" type="submit" id="button-addon2"><i
+        class="fa-solid fa-magnifying-glass"></i></button>
+  </form>
+</div>
+<div class="container">
+  {% if params.result.active %}
+  <table class="table table-hover">
+    <thead class="table-light">
+      <tr>
+        <th scope="col">Sr.No</th>
+        <th scope="col">Course Name</th>
+        <th scope="col">Course Link</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      {% for index, row in params.result.data.iterrows() %}
+      <tr>
+        <th scope="row">{{loop.index}}</th>
+        <td>{{row['Course Name']}}</td>
+        <td>
+          <a href="{{row['Course URL']}}" target="_blank">{{row['Course URL']}}</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+</div>
+{% endblock %}
+{% block js_links %}
+{% endblock %}

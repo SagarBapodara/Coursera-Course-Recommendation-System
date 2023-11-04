@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block css_links %}
+{% endblock %}
+{% block body %}
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Contributed Project</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page"  href="/SagarBapodara">Sagar Bapodara's Project</a>
+    </li>
+  </ul>
+</div>
+<div class="container">
+  <form method="POST" class="input-group my-5">
+    <select name="des">
+        {% for course in params.course_list %}
+        <option value="{{course}}">{{course}}</option>
+        {% endfor %}
+    </select>
+    <button class="btn btn-outline-primary" type="submit" id="button-addon2">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+  </form>
+</div>
+<div class="container">
+  {% if params.result.active %}
+  <table class="table table-hover">
+    <thead class="table-light">
+      <tr>
+        <th scope="col">Sr.No</th>
+        <th scope="col">Course Name</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      {% for course_name in params.result.data %}
+      <tr>
+        <th scope="row">{{loop.index}}</th>
+        <td>{{course_name}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+</div>
+{% endblock %}
+{% block js_links %}
+{% endblock %}
