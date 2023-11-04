@@ -82,3 +82,27 @@ Ending Credits
 - Made using Python and Streamlit
 - @Author : [Sagar Bapodara](https://www.linkedin.com/in/sagar-bapodara/)
 
+
+# Contribution
+The contributed project is made on Flask Framework, which is combination of the the original project of Sagar Bapodara & the final year students of Shah and Anchor Kutchhi Engineering college.
+
+## 🔗 Contributors
+[[Nimit More]](https://github.com/nimitmore27)
+
+[[Shradha Jaiswal]](https://github.com/Jaiswalshradha)
+
+[[Shrushti Thakur]](https://github.com/shrushti0502)
+
+[[Hetal Paramar]](https://github.com/Hetsss)
+
+### Demo
+Clone this repository or Download the files into your local system. 
+
+- Extract the ZIP file (if you directly download from Github Web)
+- Make sure all the files are in the same folder/directory
+- Open your Command Prompt (CMD) in the same directory 
+- Type the following command (for web app) : 
+
+```bash
+python app.py
+```
